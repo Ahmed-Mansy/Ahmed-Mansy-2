@@ -1,1 +1,60 @@
 /* You can add global styles to this file, and also import other style files */
+@import "tailwindcss";
+@import "flowbite/src/themes/default";
+@plugin "flowbite/plugin";
+@source "../node_modules/flowbite";
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --main-color: #249c6e;
+    --second-color: #34d399;
+    --text-color: #090f41;
+    --secondText-color: #9D9DAA;
+    --_3rdText-color: #C0C0C0;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+
+}
+
+
+@theme {
+    --color-mainColor: var(--main-color);
+    --color-secondColor: var(--second-color);
+    --color-textColor: var(--text-color);
+    --color-2ndTextColor: #9D9DAA;
+    --color-3rdTextColor: #C0C0C0;
+    --color-bgColor: #F6F6F6;
+    --color-cardColor: ##FFFFFF;
+    --color-reviewColor: #FFC000;
+    --color-errorColor: #D00439;
+    --color-bgFooterColor: #2E2E2E;
+    --color-muted: hsl(215.4 16.3% 46.9%)
+}
+
+.bgcolor {
+    background-color: rgb(255, 255, 255, 0.8);
+}
+
+.myShadow {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.main-color {
+    color: #59CEE0;
+}
+
+body {
+    /* font-family: "Agbalumo", system-ui; */
+    background-color: var(--color-bgColor);
+}
+
+.nav-link.active {
+    color: #14b8a6;
+    /* teal */
+    font-weight: 600;
+    border-bottom: 2px solid #14b8a6;
+    transition: all 0.3s ease;
+}
