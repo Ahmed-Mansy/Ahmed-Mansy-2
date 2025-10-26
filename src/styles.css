@@ -8,6 +8,18 @@ html {
     scroll-behavior: smooth;
 }
 
+::-moz-selection {
+    /* Code for Firefox */
+    color: white;
+    background: var(--main-color);
+}
+
+::selection {
+    color: white;
+    background: var(--main-color);
+
+}
+
 :root {
     --main-color: #249c6e;
     --second-color: #34d399;
