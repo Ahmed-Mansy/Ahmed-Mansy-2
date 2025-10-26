@@ -11,7 +11,7 @@ import { ProjectsComponent } from "./components/projects/projects.component";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, NavbarComponent, HomeComponent, AboutComponent, ContactComponent, FooterComponent, ProjectsComponent],
+  imports: [NavbarComponent, HomeComponent, AboutComponent, ContactComponent, FooterComponent, ProjectsComponent],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

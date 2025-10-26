@@ -22,6 +22,10 @@ export class ProjectsComponent {
     { path: 'https://e-commerce-three-sepia-uosxtn5ely.vercel.app/login', picUrl: '/images/projects/ecommerce.JPG', category: 'Angular' },
     { path: 'https://ahmed-mansy.github.io/DevFolio/', picUrl: '/images/projects/devilo.JPG', category: 'Java Script' },
     { path: 'https://ahmed-mansy.github.io/CRUD-SYSTEM/', picUrl: '/images/projects/CRUD.jpeg', category: 'Java Script' },
+    { path: 'https://ahmed-mansy.github.io/bezal/', picUrl: '/images/projects/bezal.JPG', category: 'Java Script' },
+    { path: 'https://ahmed-mansy.github.io/Angora/', picUrl: '/images/projects/angora.JPG', category: 'Java Script' },
+    { path: 'https://ahmed-mansy.github.io/bookmark/', picUrl: '/images/projects/bookmark.JPG', category: 'Java Script' },
+    { path: 'https://ahmed-mansy.github.io/to-do-list/', picUrl: '/images/projects/to-do-list.jpg', category: 'Java Script' },
     { path: 'https://ahmed-mansy.github.io/Movies/', picUrl: '/images/projects/movies.JPG', category: 'JQuery' },
     { path: 'https://karamfund.pythonanywhere.com/', picUrl: '/images/projects/karam-fund.JPG', category: 'JQuery' },
 
