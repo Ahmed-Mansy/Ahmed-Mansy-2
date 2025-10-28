@@ -46,6 +46,22 @@ export class NavbarComponent implements AfterViewInit, OnInit {
     );
 
     sections.forEach((section) => observer.observe(section));
+
+
+
+    const menu = document.getElementById('navbar-sticky');
+    const links = menu?.querySelectorAll('a');
+    const toggleBtn = document.querySelector('[data-collapse-toggle]');
+
+    links?.forEach(link => {
+      this.renderer.listen(link, 'click', () => {
+        // لو القائمة مفتوحة (على الموبايل)
+        if (menu && !menu.classList.contains('hidden')) {
+          this.renderer.addClass(menu, 'hidden');
+          toggleBtn?.setAttribute('aria-expanded', 'false');
+        }
+      });
+    });
   }
 
   theme(event: any) {
