@@ -63,7 +63,7 @@ export class ParticlesComponent implements OnInit {
         },
         move: {
           enable: true,
-          speed: 3,
+          speed: 2,
           direction: 'none',
           random: true,
           straight: false,
