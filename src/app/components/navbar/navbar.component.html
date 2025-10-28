@@ -1,12 +1,47 @@
-<nav class="dark:bg-gray-900 fixed w-full z-20 top-0 start-0 backdrop-blur-md bgcolor  dark:border-gray-600 myShadow">
+<nav
+    class="bg-navBg fixed w-full z-20 top-0 start-0 backdrop-blur-md  dark:border-gray-600 myShadow dark:bg-gray-900/50 md:dark:bg-gray-900/50">
     <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-1">
         <a href="#home" class="flex items-center space-x-3 rtl:space-x-reverse logo">
             <!-- <img src="/images/logo2.png" class="h-10" alt="Flowbite Logo"> -->
             <span
-                class="self-center text-lg md:text-2xl  font-bold whitespace-nowrap dark:text-white text-teal-600 tracking-wider relative my-logo">Ahmed
+                class="self-center text-lg md:text-2xl  font-bold whitespace-nowrap dark:text-mainColor text-teal-600 tracking-wider relative my-logo">Ahmed
                 Mansy</span>
         </a>
-        <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse items-center">
+        <div class="flex md:order-2 space-x-3 md:space-x-3 rtl:space-x-reverse items-center">
+            <button title="Toggle Theme" (click)="theme($event)" class=" cursor-pointer
+        w-12 
+        h-6 
+        rounded-full 
+        p-1 
+        bg-gray-400 
+        dark:bg-gray-600 
+        relative 
+        transition-colors 
+        duration-500 
+        ease-in
+        focus:outline-none 
+        focus:ring-2 
+        focus:ring-blue-700 
+        dark:focus:ring-blue-600 
+        focus:border-transparent
+      ">
+                <div id="toggle" class="
+            rounded-full 
+            w-4 
+            h-4 
+            bg-blue-600 
+            dark:bg-blue-500 
+            relative 
+            ml-0 
+            dark:ml-6 
+            pointer-events-none 
+            transition-all 
+            duration-300 
+            ease-out
+        ">
+                </div>
+            </button>
+
             <a href="/files/Ahmed-Mansy-frontend.pdf" target="_blank">
                 <button type="button"
                     class="cursor-pointer text-white bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-2 md:px-5 py-2.5 text-center me-2">
@@ -29,10 +64,10 @@
         </div>
         <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
             <ul
-                class="flex flex-col p-4 md:p-0 mt-4 font-light border border-gray-100 rounded-lg  md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0  dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                class="flex flex-col p-4 md:p-0 mt-4 font-light border border-gray-100 rounded-lg  md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0   dark:border-gray-700">
                 <li>
                     <a href="#home"
-                        class="nav-link active block py-2 px-3 rounded-sm md:bg-transparent md:hover:text-mainColor md:text-gray-900 md:p-0 md:dark:text-blue-500"
+                        class="nav-link active block py-2 px-3 rounded-sm md:bg-transparent md:hover:text-mainColor md:text-gray-900 md:p-0 md:dark:text-white"
                         aria-current="page">Home</a>
                 </li>
                 <li>

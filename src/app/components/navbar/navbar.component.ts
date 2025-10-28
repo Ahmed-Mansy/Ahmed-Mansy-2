@@ -1,4 +1,5 @@
-import { AfterViewInit, Component, inject, Renderer2 } from '@angular/core';
+import { AfterViewInit, Component, inject, OnInit, Renderer2 } from '@angular/core';
+import { initFlowbite } from 'flowbite';
 
 @Component({
   selector: 'app-navbar',
@@ -6,11 +7,18 @@ import { AfterViewInit, Component, inject, Renderer2 } from '@angular/core';
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css'
 })
-export class NavbarComponent implements AfterViewInit {
+export class NavbarComponent implements AfterViewInit, OnInit {
 
   private readonly renderer = inject(Renderer2)
 
-
+  ngOnInit(): void {
+    initFlowbite();
+    document.documentElement.classList.toggle(
+      "dark",
+      localStorage['theme'] === "dark" ||
+      (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches),
+    );
+  }
 
   ngAfterViewInit(): void {
     const sections = document.querySelectorAll('section[id]');
@@ -39,4 +47,18 @@ export class NavbarComponent implements AfterViewInit {
 
     sections.forEach((section) => observer.observe(section));
   }
+
+  theme(event: any) {
+    let my = document.documentElement.classList.toggle('dark')
+    console.log(my)
+    if (my) {
+      localStorage['theme'] = "dark";
+    }
+    else {
+      localStorage['theme'] = "light";
+
+    }
+  }
+
+
 }
