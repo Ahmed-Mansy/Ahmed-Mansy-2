@@ -25,6 +25,7 @@ export class App implements OnInit, AfterViewInit {
       duration: 1000, // animation duration
       once: true,     // whether animation should happen only once
     });
+
   }
 
   ngAfterViewInit() {
