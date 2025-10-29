@@ -1,0 +1,258 @@
+/* About Section Enhanced Styles */
+
+#about {
+    background: linear-gradient(to bottom, transparent, rgba(248, 250, 252, 0.5), transparent);
+    transition: background 0.5s ease;
+}
+
+html.dark #about {
+    background: linear-gradient(to bottom, transparent, rgba(15, 23, 42, 0.3), transparent);
+}
+
+/* Section badge hover effect */
+#about .inline-flex {
+    backdrop-filter: blur(10px);
+    position: relative;
+    overflow: hidden;
+}
+
+#about .inline-flex::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: radial-gradient(circle, rgba(52, 211, 153, 0.3) 0%, transparent 70%);
+    transform: translate(-50%, -50%);
+    transition: width 0.4s ease, height 0.4s ease;
+    border-radius: 50%;
+}
+
+#about .inline-flex:hover::before {
+    width: 200px;
+    height: 200px;
+}
+
+/* Heading gradient effect */
+#about h2 {
+    position: relative;
+    background: linear-gradient(135deg, #1f2937 0%, #0f172a 100%);
+    -webkit-background-clip: text;
+    /* -webkit-text-fill-color: transparent; */
+    background-clip: text;
+}
+
+html.dark #about h2 {
+    background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Animated underline for heading */
+#about h2::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--main-color), var(--second-color));
+    border-radius: 2px;
+    animation: slideIn 1s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        width: 0;
+        opacity: 0;
+    }
+
+    to {
+        width: 80px;
+        opacity: 1;
+    }
+}
+
+/* Tech stack badges enhanced */
+#about .flex-wrap span {
+    position: relative;
+    overflow: hidden;
+}
+
+#about .flex-wrap span::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s ease;
+}
+
+#about .flex-wrap span:hover::before {
+    left: 100%;
+}
+
+/* CTA buttons enhanced */
+#about a[href="#projects"],
+#about a[href="#contact"] {
+    position: relative;
+    overflow: hidden;
+}
+
+#about a[href="#projects"]::before,
+#about a[href="#contact"]::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s ease, height 0.6s ease;
+}
+
+#about a[href="#projects"]:hover::before,
+#about a[href="#contact"]:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+/* Image container effects */
+#about .relative.w-64 {
+    animation: floatImage 6s ease-in-out infinite;
+}
+
+@keyframes floatImage {
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+/* Image card glow effect */
+#about .bg-white,
+html.dark #about .dark\:bg-gray-800 {
+    position: relative;
+}
+
+#about .bg-white::before {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    background: linear-gradient(135deg,
+            rgba(249, 115, 22, 0.2),
+            rgba(236, 72, 153, 0.2),
+            rgba(59, 130, 246, 0.2));
+    border-radius: 1.5rem;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: -1;
+    filter: blur(10px);
+}
+
+html.dark #about .dark\:bg-gray-800::before {
+    background: linear-gradient(135deg,
+            rgba(52, 211, 153, 0.3),
+            rgba(59, 130, 246, 0.3),
+            rgba(168, 85, 247, 0.3));
+}
+
+#about .bg-white:hover::before,
+html.dark #about .dark\:bg-gray-800:hover::before {
+    opacity: 1;
+}
+
+/* Decorative floating elements animation */
+.animate-bounce {
+    animation: bounce 3s ease-in-out infinite;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+.animate-pulse {
+    animation: pulseGlow 4s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+
+    0%,
+    100% {
+        opacity: 0.6;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+}
+
+/* Smooth transitions for all text elements */
+#about p,
+#about span,
+#about h2 {
+    transition: color 0.3s ease;
+}
+
+/* Enhanced description text with subtle animation */
+#about .space-y-4 p {
+    position: relative;
+    padding-left: 20px;
+}
+
+#about .space-y-4 p::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 4px;
+    height: 80%;
+    background: linear-gradient(to bottom, var(--main-color), transparent);
+    border-radius: 2px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+#about .space-y-4:hover p::before {
+    opacity: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #about h2::after {
+        width: 60px;
+    }
+
+    @keyframes floatImage {
+
+        0%,
+        100% {
+            transform: translateY(0px);
+        }
+
+        50% {
+            transform: translateY(-10px);
+        }
+    }
+}

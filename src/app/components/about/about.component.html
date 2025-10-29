@@ -1,7 +1,16 @@
-<section id="about" class="mt-10 py-20 relative overflow-hidden">
-    <!-- Background decorative elements -->
-    <div class="absolute top-0 right-0 w-72 h-72 bg-orange-200/30 rounded-full blur-3xl -z-10"></div>
-    <div class="absolute bottom-0 left-0 w-96 h-96 bg-teal-200/20 rounded-full blur-3xl -z-10"></div>
+<section id="about" class="mt-10 py-20 relative overflow-hidden bg-transparent transition-colors duration-500">
+    <!-- Background decorative elements - Light Mode -->
+    <div
+        class="absolute top-0 right-0 w-72 h-72 bg-orange-200/30 dark:bg-orange-500/10 rounded-full blur-3xl -z-10 transition-colors duration-500">
+    </div>
+    <div
+        class="absolute bottom-0 left-0 w-96 h-96 bg-teal-200/20 dark:bg-teal-500/10 rounded-full blur-3xl -z-10 transition-colors duration-500">
+    </div>
+
+    <!-- Additional decorative elements for depth -->
+    <div
+        class="absolute top-1/2 left-1/4 w-64 h-64 bg-blue-200/20 dark:bg-blue-500/5 rounded-full blur-3xl -z-10 transition-colors duration-500">
+    </div>
 
     <div class="container px-6 lg:px-10 mx-auto">
         <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
@@ -12,7 +21,7 @@
 
                 <!-- Section badge -->
                 <div
-                    class="inline-flex items-center gap-2 bg-mainColor/10 text-mainColor px-4 py-2 rounded-full text-sm font-semibold">
+                    class="inline-flex items-center gap-2 bg-mainColor/10 dark:bg-mainColor/20 text-mainColor dark:text-emerald-400 px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300 hover:bg-mainColor/20 dark:hover:bg-mainColor/30 hover:scale-105">
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
@@ -21,18 +30,20 @@
                 </div>
 
                 <!-- Main heading -->
-                <h2 class="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
+                <h2
+                    class="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight transition-colors duration-300 dark:text-white">
                     Frontend Developer
                 </h2>
 
                 <!-- Description -->
                 <div class="space-y-4">
-                    <p class="text-gray-600 text-lg leading-relaxed">
-                        Hi, I'm <span class="font-semibold text-gray-900">Ahmed Mansy</span> — a self-taught frontend
+                    <p class="text-gray-600 dark:text-gray-300 text-lg leading-relaxed transition-colors duration-300">
+                        Hi, I'm <span class="font-semibold text-gray-900 dark:text-white">Ahmed Mansy</span> – a
+                        self-taught frontend
                         developer with a passion for exploring new technologies and creating seamless user experiences.
                     </p>
 
-                    <p class="text-gray-600 text-lg leading-relaxed">
+                    <p class="text-gray-600 dark:text-gray-300 text-lg leading-relaxed transition-colors duration-300">
                         I'm a fast learner with an open mind, always eager to grasp new concepts and stay ahead in the
                         ever-evolving world of web development.
                     </p>
@@ -40,26 +51,28 @@
 
                 <!-- Tech stack -->
                 <div class="pt-4">
-                    <p class="text-sm font-semibold text-gray-500 mb-3 uppercase tracking-wide">Tech Stack</p>
+                    <p
+                        class="text-sm font-semibold text-gray-500 dark:text-gray-400 mb-3 uppercase tracking-wide transition-colors duration-300">
+                        Tech Stack</p>
                     <div class="flex flex-wrap gap-2">
                         <span
-                            class="px-4 py-2 bg-gradient-to-r from-yellow-400 to-yellow-500 text-white rounded-lg text-sm font-medium shadow-md">JavaScript</span>
+                            class="px-4 py-2 bg-gradient-to-r from-yellow-400 to-yellow-500 text-white rounded-lg text-sm font-medium shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-default">JavaScript</span>
                         <span
-                            class="px-4 py-2 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-lg text-sm font-medium shadow-md">TypeScript</span>
+                            class="px-4 py-2 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-lg text-sm font-medium shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-default">TypeScript</span>
                         <span
-                            class="px-4 py-2 bg-gradient-to-r from-red-500 to-red-600 text-white rounded-lg text-sm font-medium shadow-md">Angular</span>
+                            class="px-4 py-2 bg-gradient-to-r from-red-500 to-red-600 text-white rounded-lg text-sm font-medium shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-default">Angular</span>
                         <span
-                            class="px-4 py-2 bg-gradient-to-r from-cyan-400 to-cyan-500 text-white rounded-lg text-sm font-medium shadow-md">Tailwind
+                            class="px-4 py-2 bg-gradient-to-r from-cyan-400 to-cyan-500 text-white rounded-lg text-sm font-medium shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-default">Tailwind
                             CSS</span>
                         <span
-                            class="px-4 py-2 bg-gradient-to-r from-purple-500 to-purple-600 text-white rounded-lg text-sm font-medium shadow-md">CSS3</span>
+                            class="px-4 py-2 bg-gradient-to-r from-purple-500 to-purple-600 text-white rounded-lg text-sm font-medium shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-default">CSS3</span>
                     </div>
                 </div>
 
-                <!-- CTA buttons (optional) -->
+                <!-- CTA buttons -->
                 <div class="flex flex-wrap gap-4 pt-6">
                     <a href="#projects"
-                        class="inline-flex items-center gap-2 bg-mainColor text-white px-6 py-3 rounded-full font-semibold hover:bg-mainColor/90 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105">
+                        class="inline-flex items-center gap-2 bg-mainColor dark:bg-emerald-500 text-white px-6 py-3 rounded-full font-semibold hover:bg-mainColor/90 dark:hover:bg-emerald-600 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105">
                         View My Work
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -67,36 +80,43 @@
                         </svg>
                     </a>
                     <a href="#contact"
-                        class="inline-flex items-center gap-2 border-2 border-mainColor text-mainColor px-6 py-3 rounded-full font-semibold hover:bg-mainColor hover:text-white transition-all duration-300">
+                        class="inline-flex items-center gap-2 border-2 border-mainColor dark:border-emerald-400 text-mainColor dark:text-emerald-400 px-6 py-3 rounded-full font-semibold hover:bg-mainColor dark:hover:bg-emerald-500 hover:text-white transition-all duration-300 shadow-md hover:shadow-lg hover:scale-105">
                         Get In Touch
                     </a>
                 </div>
             </div>
 
+            <!-- Image Section -->
             <div data-aos="fade-left" data-aos-duration="1000" data-aos-once="false"
                 class="order-1 lg:order-2 relative flex justify-center lg:justify-end">
 
                 <div class="relative w-64 lg:w-80">
-
+                    <!-- Animated background shape -->
                     <div
-                        class="absolute inset-0 bg-gradient-to-br from-orange-400 to-orange-600 rounded-3xl transform rotate-6 opacity-20">
+                        class="absolute inset-0 bg-gradient-to-br from-orange-400 to-orange-600 dark:from-emerald-400 dark:to-teal-600 rounded-3xl transform rotate-6 opacity-20 dark:opacity-30 transition-all duration-500 animate-pulse">
                     </div>
 
-
+                    <!-- Card container -->
                     <div
-                        class="relative bg-white p-2 rounded-3xl shadow-2xl transform hover:scale-105 transition-transform duration-500">
+                        class="relative bg-white dark:bg-gray-800 p-2 rounded-3xl shadow-2xl dark:shadow-emerald-500/20 transform hover:scale-105 transition-all duration-500 border border-gray-100 dark:border-gray-700">
                         <div class="relative overflow-hidden rounded-2xl">
                             <img src="/images/Ahmed.jpg" class="w-full h-auto object-cover"
                                 alt="Ahmed Mansy Profile Photo">
 
-
+                            <!-- Hover overlay -->
                             <div
-                                class="absolute inset-0 bg-gradient-to-t from-mainColor/20 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300">
+                                class="absolute inset-0 bg-gradient-to-t from-mainColor/30 dark:from-emerald-500/40 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300">
                             </div>
                         </div>
                     </div>
 
-
+                    <!-- Floating decorative elements -->
+                    <div
+                        class="absolute -top-4 -right-4 w-20 h-20 bg-mainColor/20 dark:bg-emerald-400/20 rounded-full blur-xl animate-bounce">
+                    </div>
+                    <div
+                        class="absolute -bottom-4 -left-4 w-16 h-16 bg-blue-500/20 dark:bg-blue-400/20 rounded-full blur-xl animate-pulse">
+                    </div>
                 </div>
             </div>
 

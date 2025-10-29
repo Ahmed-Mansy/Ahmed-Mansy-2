@@ -9,6 +9,8 @@ html {
     scroll-behavior: smooth;
 }
 
+
+
 ::-moz-selection {
     /* Code for Firefox */
     color: white;
@@ -21,6 +23,7 @@ html {
 
 }
 
+/* Root variables for light mode */
 :root {
     --main-color: #249c6e;
     --second-color: #34d399;
@@ -28,8 +31,23 @@ html {
     --secondText-color: #9D9DAA;
     --_3rdText-color: #C0C0C0;
     --muted-foreground: 215.4 16.3% 46.9%;
+    --bg-gradient-start: #ffffff;
+    --bg-gradient-end: #f8fafc;
+    --card-shadow: rgba(0, 0, 0, 0.1);
+    --card-shadow-hover: rgba(0, 0, 0, 0.15);
+}
 
-
+/* Dark mode variables */
+html.dark {
+    --main-color: #34d399;
+    --second-color: #10b981;
+    --text-color: #f1f5f9;
+    --secondText-color: #cbd5e1;
+    --_3rdText-color: #94a3b8;
+    --bg-gradient-start: #0f172a;
+    --bg-gradient-end: #1e293b;
+    --card-shadow: rgba(0, 0, 0, 0.3);
+    --card-shadow-hover: rgba(0, 0, 0, 0.5);
 }
 
 
@@ -61,10 +79,11 @@ html {
     color: #59CEE0;
 }
 
+
 body {
-    /* font-family: "Agbalumo", system-ui; */
-    background-color: var(--color-bgColor);
-    /* background-color: transparent; */
+    background: linear-gradient(135deg, var(--bg-gradient-start) 0%, var(--bg-gradient-end) 100%);
+    min-height: 100vh;
+    position: relative;
 }
 
 .nav-link.active {
@@ -75,17 +94,230 @@ body {
     transition: all 0.3s ease;
 }
 
-
-html.dark {
-    --tw-bg-opacity: 1;
-    background-color: rgba(31, 41, 55, var(--tw-bg-opacity));
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:
+        radial-gradient(circle at 20% 50%, rgba(52, 211, 153, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(59, 130, 246, 0.08) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: 0;
+    animation: backgroundMove 15s ease-in-out infinite;
 }
 
-html.dark .dark\:ml-6 {
-    margin-left: 1.5rem;
+html.dark body::before {
+    background-image:
+        radial-gradient(circle at 20% 50%, rgba(52, 211, 153, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(59, 130, 246, 0.05) 0%, transparent 50%);
 }
 
-html.dark .dark\:bg-blue-500 {
-    --tw-bg-opacity: 1;
-    background-color: rgba(59, 130, 246, var(--tw-bg-opacity));
+@keyframes backgroundMove {
+
+    0%,
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.8;
+        transform: scale(1.1);
+    }
+}
+
+/* Enhanced navbar with glassmorphism */
+nav {
+    background: rgba(255, 255, 255, 0.85) !important;
+    backdrop-filter: blur(12px) saturate(180%);
+    -webkit-backdrop-filter: blur(12px) saturate(180%);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+}
+
+html.dark nav {
+    background: rgba(15, 23, 42, 0.85) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* Animated theme toggle button */
+.theme-toggle {
+    position: relative;
+    background: linear-gradient(145deg, #e2e8f0, #cbd5e1);
+    box-shadow:
+        inset 2px 2px 5px rgba(0, 0, 0, 0.1),
+        inset -2px -2px 5px rgba(255, 255, 255, 0.7);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+html.dark .theme-toggle {
+    background: linear-gradient(145deg, #1e293b, #0f172a);
+    box-shadow:
+        inset 2px 2px 5px rgba(0, 0, 0, 0.4),
+        inset -2px -2px 5px rgba(255, 255, 255, 0.05);
+}
+
+/* Toggle ball with icon effect */
+#toggle {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+#toggle::before {
+    content: '☀️';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 10px;
+    transition: all 0.3s ease;
+}
+
+html.dark #toggle::before {
+    content: '🌙';
+}
+
+/* Enhanced cards and sections */
+section {
+    position: relative;
+    z-index: 1;
+}
+
+.card,
+[class*="card"] {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow:
+        0 8px 32px var(--card-shadow),
+        0 0 0 1px rgba(255, 255, 255, 0.1) inset;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+html.dark .card,
+html.dark [class*="card"] {
+    background: rgba(30, 41, 59, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow:
+        0 8px 32px var(--card-shadow),
+        0 0 0 1px rgba(255, 255, 255, 0.05) inset;
+}
+
+.card:hover,
+[class*="card"]:hover {
+    transform: translateY(-4px);
+    box-shadow:
+        0 12px 48px var(--card-shadow-hover),
+        0 0 0 1px rgba(255, 255, 255, 0.2) inset;
+}
+
+/* Enhanced navigation links */
+.nav-link {
+    position: relative;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--main-color), var(--second-color));
+    transform: translateX(-50%);
+    transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 2px;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+.nav-link.active {
+    color: var(--main-color);
+    font-weight: 600;
+    border-bottom: none;
+}
+
+
+
+/* Selection styling */
+::selection {
+    background: linear-gradient(135deg, var(--main-color), var(--second-color));
+    color: white;
+}
+
+::-moz-selection {
+    background: linear-gradient(135deg, var(--main-color), var(--second-color));
+    color: white;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-gradient-start);
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, var(--main-color), var(--second-color));
+    border-radius: 5px;
+    border: 2px solid var(--bg-gradient-start);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, var(--second-color), var(--main-color));
+}
+
+/* Enhanced logo animation */
+.my-logo {
+    background: linear-gradient(135deg, #0d9488, #14b8a6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    background-size: 200% 200%;
+    animation: gradientShift 3s ease infinite;
+}
+
+html.dark .my-logo {
+    background: linear-gradient(135deg, #34d399, #10b981);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    background-size: 200% 200%;
+}
+
+@keyframes gradientShift {
+
+    0%,
+    100% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+/* Smooth page load animation */
+body {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
