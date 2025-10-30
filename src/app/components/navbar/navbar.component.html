@@ -7,45 +7,34 @@
                 Mansy</span>
         </a>
         <div class="flex md:order-2 space-x-2 md:space-x-3 rtl:space-x-reverse items-center">
-            <!-- Enhanced Theme Toggle Button -->
-            <button title="Toggle Theme" (click)="theme($event)" class="theme-toggle cursor-pointer
-                w-14 
-                h-7 
-                rounded-full 
-                p-1 
-                bg-gray-300 
-                dark:bg-gray-700 
-                relative 
-                transition-all 
-                duration-500 
-                ease-in-out
-                focus:outline-none 
-                focus:ring-2 
-                focus:ring-teal-500
-                dark:focus:ring-emerald-400
-                focus:border-transparent
-                hover:shadow-lg
-                group
-            ">
-                <div id="toggle" class="
-                    rounded-full 
-                    w-5 
-                    h-5 
-                    bg-gradient-to-br from-yellow-400 to-orange-500
-                    dark:bg-gradient-to-br dark:from-blue-400 dark:to-purple-500
-                    relative 
-                    ml-0 
-                    dark:ml-7 
-                    pointer-events-none 
-                    transition-all 
-                    duration-500 
-                    ease-out
-                    shadow-md
-                    group-hover:scale-110
-                ">
-                </div>
+            <button title="Switch to Light Theme" (click)="theme($event)"
+                class="hidden cursor-pointer dark:inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-yellow-400 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 hover:bg-yellow-500/20 text-yellow-400 hover:text-yellow-300 h-10 w-10"
+                aria-label="Switch to light theme">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-sun" aria-hidden="true">
+                    <circle cx="12" cy="12" r="4"></circle>
+                    <path d="M12 2v2"></path>
+                    <path d="M12 20v2"></path>
+                    <path d="m4.93 4.93 1.41 1.41"></path>
+                    <path d="m17.66 17.66 1.41 1.41"></path>
+                    <path d="M2 12h2"></path>
+                    <path d="M20 12h2"></path>
+                    <path d="m6.34 17.66-1.41 1.41"></path>
+                    <path d="m19.07 4.93-1.41 1.41"></path>
+                </svg>
             </button>
 
+
+            <button title="Switch to Dark Theme" (click)="theme($event)"
+                class="inline-flex cursor-pointer dark:hidden items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 hover:bg-indigo-500/20 text-indigo-600 hover:text-indigo-700 h-10 w-10"
+                aria-label="Switch to dark theme">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-moon" aria-hidden="true">
+                    <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+                </svg>
+            </button>
             <a href="/files/Ahmed-Mansy-frontend.pdf" target="_blank">
                 <button type="button"
                     class="cursor-pointer text-white bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800 font-medium rounded-lg text-xs px-2 md:px-5 py-2.5 text-center  transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5">
