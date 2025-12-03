@@ -18,7 +18,7 @@ export class ProjectsComponent {
 
   photos = [
     { path: 'https://crepiano.netlify.app/', picUrl: '/images/projects/crepe2.jpg', category: 'Java Script' },
-    { path: 'https://github.com/Ahmed-Mansy/social-app', picUrl: '/images/projects/social.jpg', category: 'Angular' },
+    { path: 'https://social-app-iota-five.vercel.app/login', picUrl: '/images/projects/social.jpg', category: 'Angular' },
     { path: 'https://e-commerce-three-sepia-uosxtn5ely.vercel.app/login', picUrl: '/images/projects/ecommerce.JPG', category: 'Angular' },
     { path: 'https://ahmed-mansy.github.io/DevFolio/', picUrl: '/images/projects/devilo.JPG', category: 'Java Script' },
     { path: 'https://ahmed-mansy.github.io/CRUD-SYSTEM/', picUrl: '/images/projects/CRUD.jpeg', category: 'Java Script' },
