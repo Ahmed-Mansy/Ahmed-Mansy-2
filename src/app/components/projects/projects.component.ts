@@ -15,6 +15,7 @@ export class ProjectsComponent {
   render = true;
   fading = false; // new state for fade animation
   loading = false;
+  showProjects = false; // Controls initial display with animation
 
   photos = [
     { path: 'https://crepiano.netlify.app/', picUrl: '/images/projects/crepe2.jpg', category: 'Java Script' },
@@ -48,8 +49,12 @@ export class ProjectsComponent {
   }
 
   ngAfterViewInit() {
-    // Ensures dynamic content or route changes are recognized
-    AOS.refresh();
+    // Trigger initial project display with animation after a brief delay
+    setTimeout(() => {
+      this.showProjects = true;
+      // Ensures dynamic content or route changes are recognized
+      AOS.refresh();
+    }, 100);
   }
 
 

@@ -3,10 +3,10 @@
     <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-1">
         <a href="#home" class="flex items-center space-x-3 rtl:space-x-reverse logo">
             <span
-                class="self-center text-[1rem] md:text-2xl font-bold whitespace-nowrap dark:text-mainColor text-teal-600 tracking-wider relative my-logo">Ahmed
+                class="self-center text-lg sm:text-xl md:text-2xl font-bold whitespace-nowrap dark:text-mainColor text-teal-600 tracking-wider relative my-logo">Ahmed
                 Mansy</span>
         </a>
-        <div class="flex md:order-2 space-x-2 md:space-x-3 rtl:space-x-reverse items-center">
+        <div class="flex md:order-2 space-x-1 md:space-x-3 rtl:space-x-reverse items-center">
             <button title="Switch to Light Theme" (click)="theme($event)"
                 class="hidden cursor-pointer dark:inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-yellow-400 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 hover:bg-yellow-500/20 text-yellow-400 hover:text-yellow-300 h-10 w-10"
                 aria-label="Switch to light theme">
@@ -35,10 +35,10 @@
             </button>
             <a href="/files/Ahmed-Mansy-frontend.pdf" target="_blank">
                 <button type="button"
-                    class="cursor-pointer text-white bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800 font-medium rounded-lg text-xs px-2 md:px-5 py-2.5 text-center  transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5">
-                    <div class="flex justify-between items-center space-x-2">
-                        <i class="fa-solid fa-download"></i>
-                        <span>Download CV</span>
+                    class="cursor-pointer text-white bg-gradient-to-br from-green-400 to-blue-600 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800 font-medium rounded-lg text-xs sm:text-sm px-2 sm:px-4 md:px-5 py-2 sm:py-2.5 text-center transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5 min-w-[32px] sm:min-w-fit">
+                    <div class="flex justify-between items-center space-x-0 sm:space-x-2">
+                        <i class="fa-solid fa-download text-xs sm:text-sm"></i>
+                        <span class="hidden sm:inline">Download CV</span>
                     </div>
                 </button>
             </a>
